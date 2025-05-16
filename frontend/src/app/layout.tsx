@@ -9,8 +9,11 @@ import '@/styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ERP System',
-  description: 'Enterprise Resource Planning System with Grafana Integration',
+  title: 'Visionvation ERP',
+  description: 'Enterprise Resource Planning System for Visionvation with Grafana Integration',
+  icons: {
+    icon: '/assets/visionvation_logo.png',
+  },
 };
 
 export default function RootLayout({
@@ -20,6 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/visionvation_logo.png" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider theme={theme}>
           <CssBaseline />

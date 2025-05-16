@@ -9,6 +9,7 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image'; // Import next/image
 
 const drawerWidth = 240;
 
@@ -33,9 +34,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const drawer = (
     <div>
-      <Toolbar>
+      <Toolbar sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', py: 2 }}>
+        <Image src="/assets/visionvation_logo.png" alt="Visionvation Logo" width={40} height={40} style={{ marginRight: '10px' }} />
         <Typography variant="h6" noWrap component="div">
-          ERP System
+          Visionvation
         </Typography>
       </Toolbar>
       <List>
@@ -80,7 +82,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            {menuItems.find(item => item.path === pathname)?.text || 'ERP System'}
+            {menuItems.find(item => item.path === pathname)?.text || 'Visionvation ERP'}
           </Typography>
         </Toolbar>
       </AppBar>
